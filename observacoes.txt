@@ -1,0 +1,28 @@
+Passo a passo para enviar o arquivo para o GitHub
+Vamos supor que você já salvou o seu arquivo de anotações (por exemplo, observacoes.txt) na mesma pasta do seu projeto.
+
+Diga ao Git que o arquivo existe:
+Abra o Terminal no VS Code e use o comando git add. Isso prepara o arquivo para ser salvo.
+
+Bash
+￼
+git add .
+O ponto (.) avisa ao Git para incluir todos os arquivos novos ou alterados na sua pasta.
+
+Salve o arquivo na história do seu projeto:
+Agora, crie um "ponto de salvamento" com uma mensagem que descreve o que você fez.
+
+Bash
+￼
+git commit -m "adicionei um arquivo de anotações"
+Isso cria um registro da sua mudança no seu computador.
+
+Envie o arquivo para o GitHub:
+Por fim, envie o arquivo do seu computador para o seu repositório online no GitHub.
+
+Bash
+￼
+git push
+Este comando envia todas as suas alterações salvas para a nuvem.
+
+Depois de rodar o git push, seu arquivo de anotações estará no seu repositório do GitHub. Você pode ir lá e conferir.
