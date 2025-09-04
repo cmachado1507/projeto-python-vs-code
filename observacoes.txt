@@ -26,3 +26,178 @@ git push
 Este comando envia todas as suas alterações salvas para a nuvem.
 
 Depois de rodar o git push, seu arquivo de anotações estará no seu repositório do GitHub. Você pode ir lá e conferir.
+
+---------------------------------------------------------
+
+estou tentando usar o github no windows mas o git nao esta instalado
+
+
+É um prazer te ajudar com isso! Se você quer usar o Git no Windows, mas ainda não tem ele instalado, o processo é bem simples.
+
+Para começar, você precisa baixar o instalador oficial do Git.
+
+Baixar e Instalar o Git no Windows
+Acesse a página oficial de downloads: Abra seu navegador e vá para o site oficial do Git: https://git-scm.com/download/win
+
+Download automático: Assim que a página carregar, o download do instalador para Windows deve começar automaticamente. Se não começar, clique no link "Click here to download manually" para baixar o arquivo.
+
+Executar o instalador: Após o download, localize o arquivo .exe (geralmente na sua pasta Downloads) e dê um duplo clique nele para iniciar a instalação.
+
+Siga as instruções: Durante a instalação, você verá várias telas de configuração. Na maioria dos casos, você pode simplesmente clicar em Next repetidamente, aceitando as opções padrão. As configurações padrão já são ótimas para a maioria dos usuários.
+
+Verificando a instalação
+Depois que a instalação for concluída, é importante verificar se o Git foi instalado corretamente.
+
+Abra o Prompt de Comando ou PowerShell: Você pode fazer isso digitando cmd ou powershell na barra de pesquisa do menu Iniciar e pressionando Enter.
+
+Execute o comando de verificação: No terminal, digite o seguinte comando e pressione Enter:
+
+Bash
+
+git --version
+Confirme a versão: Se a instalação foi bem-sucedida, o terminal mostrará a versão do Git que você acabou de instalar (por exemplo: git version 2.42.0.windows.1).
+
+Se você vir o número da versão, significa que o Git está pronto para ser usado no seu computador!
+
+Agora você pode começar a usar comandos Git para gerenciar seus projetos diretamente do terminal ou através de ferramentas gráficas que se integram a ele.
+
+
+como posso puxar meus projetos do github
+
+
+Para baixar (ou "puxar") seus projetos do GitHub para o seu computador, você precisa usar o comando git clone.
+
+O processo é bem simples. Siga estes passos:
+
+1. Encontre a URL do seu projeto no GitHub
+Acesse o GitHub e navegue até a página principal do repositório (o projeto) que você quer baixar.
+
+No lado direito, abaixo da lista de arquivos, procure por um botão verde com o nome <> Code. Clique nele.
+
+Uma pequena caixa se abrirá. Certifique-se de que a aba HTTPS está selecionada.
+
+Copie a URL que aparece ali. Ela deve ter o formato https://github.com/seu-usuario/nome-do-projeto.git. Você pode usar o ícone de copiar ao lado da URL para garantir que está tudo certo.
+
+2. Abra o terminal e use o comando git clone
+Agora você vai usar o terminal (como o Prompt de Comando ou PowerShell no Windows) para baixar o projeto.
+
+Abra o terminal.
+
+Navegue até a pasta onde você quer que o projeto seja salvo no seu computador. Por exemplo, se você quer salvá-lo na sua pasta de "Documentos", você usaria um comando como este:
+
+Bash
+
+cd C:\Users\SeuNomeDeUsuario\Documents
+(Lembre-se de substituir SeuNomeDeUsuario pelo seu nome de usuário do Windows).
+
+Agora, use o comando git clone seguido da URL que você copiou no passo 1. Cole a URL no final do comando:
+
+Bash
+
+git clone https://github.com/seu-usuario/nome-do-projeto.git
+Pressione Enter.
+
+O Git vai começar a baixar todos os arquivos do repositório para uma nova pasta, com o mesmo nome do seu projeto (nome-do-projeto).
+
+Depois que o processo terminar, você terá uma cópia local completa do seu projeto, pronta para ser editada e modificada no seu computador.
+
+
+como posso ver no vs code apos baixar tudo?
+
+
+Excelente! Depois de usar o comando git clone para baixar o projeto, o próximo passo é abri-lo no VS Code.
+
+Para fazer isso, você tem duas opções principais:
+
+Opção 1: Abrir a pasta do projeto diretamente no VS Code
+Esta é a forma mais comum e direta.
+
+Abra o VS Code.
+
+Vá no menu superior e clique em File (Arquivo) > Open Folder... (Abrir Pasta...).
+
+Navegue até a pasta onde você clonou o projeto. Lembre-se, o git clone cria uma nova pasta com o nome do projeto (por exemplo, meu-projeto) dentro do local que você escolheu.
+
+Selecione essa pasta (a que tem o nome do projeto, não a que está acima dela) e clique em Select Folder (Selecionar Pasta).
+
+O VS Code vai recarregar e mostrar todos os arquivos do seu projeto na barra lateral esquerda, prontos para serem editados.
+
+Opção 2: Abrir a pasta a partir do terminal (rápido e direto)
+Se você ainda estiver no terminal (Prompt de Comando ou PowerShell) e já estiver dentro da pasta onde o projeto foi clonado, você pode usar um atalho.
+
+No seu terminal, digite o seguinte comando e pressione Enter:
+
+Bash
+
+cd nome-do-projeto
+(Lembre-se de substituir nome-do-projeto pelo nome da pasta que o Git criou).
+
+Agora, digite este comando:
+
+Bash
+
+code .
+O ponto (.) representa a pasta atual. Esse comando instrui o VS Code a abrir o projeto que está na pasta em que você se encontra.
+
+O VS Code será iniciado (ou, se já estiver aberto, uma nova janela será criada) com o seu projeto carregado e pronto para uso.
+
+Agora que você já está com o projeto aberto, a partir do VS Code você pode continuar a trabalhar, fazer alterações e, mais tarde, usar a integração do Git que já vem nele para fazer commits e enviar as mudanças de volta para o GitHub.
+
+
+
+eu faço ateraçoes no aquivo salvo entro no diretorio correto, digito git add . depois digito git commit -m https://github.com/cmachado1507/projeto-python-vs-code.git e ele diz Author Identity Unknow
+
+
+
+Entendi o que está acontecendo. O erro "Author Identity Unknown" (Identidade do Autor Desconhecida) não tem a ver com a URL do seu projeto, mas sim com a configuração inicial do Git no seu computador.
+
+O Git precisa saber quem você é (seu nome e e-mail) para registrar essas informações em cada commit que você faz. É como uma assinatura digital.
+
+Você está usando a URL do seu projeto de forma incorreta no comando git commit. A URL é usada para enviar as mudanças para o GitHub (com o comando git push), mas não para criar um commit. O commit é um registro local das suas alterações.
+
+Corrigindo o erro e configurando seu usuário
+Primeiro, vamos configurar seu nome e e-mail no Git. Você só precisa fazer isso uma vez no seu computador. Abra o terminal e use os seguintes comandos, substituindo Seu Nome e seu-email@exemplo.com pelas suas informações. Use o mesmo e-mail que você usa no GitHub.
+
+Bash
+
+git config --global user.name "Seu Nome"
+git config --global user.email "seu-email@exemplo.com"
+Fazendo o commit corretamente
+Agora que o Git sabe quem você é, vamos fazer o commit da forma certa. O comando git commit -m é usado para criar o commit e adicionar uma mensagem descritiva sobre as alterações que você fez. A URL do seu projeto não entra aqui.
+
+Siga estes passos:
+
+Certifique-se de que você está no diretório do seu projeto.
+
+Use git add . para adicionar todos os arquivos alterados ao "staging area" (área de preparação).
+
+Bash
+
+git add .
+Agora, faça o commit com uma mensagem clara sobre o que você mudou. Por exemplo, "Adiciona novo recurso" ou "Corrige erro de digitação".
+
+Bash
+
+git commit -m "Minha primeira alteração no projeto"
+Depois de fazer isso, você terá registrado as suas alterações localmente.
+
+Enviando as alterações para o GitHub
+Para que as suas alterações apareçam no GitHub, você precisa "empurrá-las" (ou push) para o repositório remoto. É aqui que você usará o comando git push.
+
+Bash
+
+git push
+Se for a primeira vez que você envia algo para esse projeto, talvez precise usar o seguinte comando:
+
+Bash
+
+git push origin main
+O Git pode pedir que você faça login com sua conta do GitHub ou gere um Personal Access Token. Se isso acontecer, siga as instruções que aparecerem na tela.
+
+Resumindo, a sequência correta de comandos é:
+
+git add . (Prepara os arquivos para o commit)
+
+git commit -m "Mensagem aqui" (Registra as alterações localmente)
+
+git push (Envia as alterações para o GitHub)
