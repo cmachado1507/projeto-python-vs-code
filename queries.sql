@@ -26,3 +26,4 @@ SELECT * FROM Clientes;
 UPDATE Clientes
 SET nome = 'Ana Silva'
 WHERE id = 1;
+-- deu certo
