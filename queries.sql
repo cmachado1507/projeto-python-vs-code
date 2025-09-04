@@ -26,4 +26,3 @@ SELECT * FROM Clientes;
 UPDATE Clientes
 SET nome = 'Ana Silva'
 WHERE id = 1;
--- Este é o meu arquivo SQL
