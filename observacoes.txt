@@ -201,3 +201,61 @@ git add . (Prepara os arquivos para o commit)
 git commit -m "Mensagem aqui" (Registra as alterações localmente)
 
 git push (Envia as alterações para o GitHub)
+
+-------------------------------------------------------------------------------------
+
+como eu faço para atualizar vs code sobre as mudanças realizados em outro computador
+
+
+Para que o VS Code saiba das mudanças feitas em outro computador, você precisa garantir que essas mudanças sejam primeiro enviadas para o GitHub a partir do outro computador. Depois, no computador que você está usando agora, você precisa "puxar" (baixar) essas mudanças do GitHub.
+
+É um processo simples que usa o Git.
+
+O Fluxo de Trabalho
+O fluxo é o seguinte:
+
+No outro computador:
+
+Faça suas alterações nos arquivos.
+
+Salve os arquivos (Ctrl+S).
+
+Abra o terminal e execute:
+
+Bash
+
+git add .
+git commit -m "Descrição das suas mudanças feitas em outro PC"
+git push
+Certifique-se de que o git push foi concluído com sucesso.
+
+No seu computador atual:
+
+Abra o VS Code e certifique-se de que você está na pasta do projeto que está conectada ao GitHub.
+
+Abra o terminal do VS Code.
+
+Execute o comando para baixar as novidades do GitHub:
+
+Bash
+
+git pull
+O que o git pull faz?
+O comando git pull é como uma atualização. Ele faz duas coisas automaticamente:
+
+Baixa as novas mudanças do repositório do GitHub para o seu computador.
+
+Tenta misturar essas mudanças com o que você já tem no seu computador.
+
+Se as mudanças feitas nos dois computadores não conflitarem (por exemplo, se vocês modificaram linhas diferentes do mesmo arquivo, ou arquivos diferentes), o git pull será concluído sem problemas e seus arquivos serão atualizados.
+
+E se houver conflito?
+Às vezes, se você e o outro computador modificaram a mesma linha de um arquivo, pode haver um conflito. Nesses casos, o Git avisará que há um conflito e você terá que resolver manualmente:
+
+O VS Code mostrará os conflitos no arquivo (com marcações como <<<<<<<, =======, >>>>>>>).
+
+Você precisará escolher qual versão manter (a sua, a do outro computador, ou uma combinação das duas).
+
+Depois de resolver todos os conflitos, salve o arquivo e siga os passos normais de git add ., git commit -m "resolvi conflitos", e então git push.
+
+Mas, na maioria das vezes, o git pull funciona sem problemas e atualiza seus arquivos automaticamente.
